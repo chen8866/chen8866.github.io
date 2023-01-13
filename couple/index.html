@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>幸运大转盘</title>
+		<title>情侣小游戏</title>
 		<style>
 			#mycanvas{
 				position: absolute;
@@ -17,7 +17,7 @@
 			#canvas{
 				position: absolute;
 				transform-origin: 0 0;
-				transform: translate() rotate(-90deg);
+				transform: translate() rotate(90deg);
 			}
 			
 		</style>
@@ -29,50 +29,56 @@
 		</div>
 		
 		<div style="margin: 0 auto;">
-			<input type="button" id="btn1"  value="开始抽奖" style="display: block; margin: 0 auto;" />
+			<input type="button" id="btn1"  value="开始转动" style="display: block; margin: 0 auto;" />
 		</div>
 		
 	</body>
 	<script type="text/javascript">
 		var c=document.getElementById("mycanvas")
 		var ctx=c.getContext("2d");
-		var arr=new Array("greenyellow","lawngreen","seagreen","palegreen","yellowgreen","green");
-		var str=new Array("一等奖","二等奖","三等奖","四等奖","五等奖","六等奖");
+		//设置转盘颜色
+		var arr=new Array("#d18283","#f8c5c5","#CF906E","#f4b39f","#b55f4b","#e6a0ad");
+		//设置每格内容
+		var str=new Array("亲一下嘴","用嘴给对方喂食","亲一下脚","脱对方一件衣服","任对方控制30秒","接吻30秒");
 		ctx.translate(300,300);    //将圆心移动到canvas的中心
 		// ctx.rotate(1/4);      //将圆盘0的位置转到箭头指向的地方
 		for(var i=0;i<str.length;i++){
 			ctx.rotate(Math.PI/180*360/str.length);
 			ctx.beginPath();
 			ctx.moveTo(0,0);
-			ctx.arc(0,0,200,0,Math.PI/180*(360/str.length));
+			ctx.arc(0,0,200,0,Math.PI/180*(360/str.length)); //设置转盘大小
 			ctx.lineTo(0,0);
-			// ctx.closePath();
+			//ctx.closePath();
 			ctx.fillStyle=arr[i];
 			ctx.fill();
-			
+			//设置字体
 			var txt=str[i];
-			ctx.fillStyle="orange";
-			ctx.font="20px 'Microsoft YaHei' ";
-			ctx.fillText(txt,100,60);
+			ctx.fillStyle="rgb(34, 12,12)"; //字体颜色
+			ctx.font="20px 'Microsoft YaHei' "; //字体
+			ctx.fillText(txt,50,20); //文字坐标位置
 			ctx.save();
 		}
 		
 		var ctx2=document.getElementById("canvas").getContext("2d");
-		ctx2.translate(300,280);
+		ctx2.translate(300,280); //设置圆心坐标
 		ctx2.beginPath();
 		ctx2.arc(0,0,10,0,2*Math.PI);
-		ctx2.fillStyle="black";
+		ctx2.fillStyle="#db346c"; //设置中心原点颜色
 		ctx2.fill();
-		
+		//设置指针
 		ctx2.beginPath();
-		ctx2.moveTo(0,50);
-		ctx2.lineTo(0,-150);
-		ctx2.lineWidth=5;
+		ctx2.moveTo(-30,0); //指针尾坐标
+		ctx2.lineTo(90,0); //指针头坐标
+		ctx2.lineWidth=6;  //指针宽度
+		ctx2.strokeStyle="#db346c"; //指针颜色
 		ctx2.stroke();
 		
+		
+		
 		var btn1=document.getElementById("btn1");
-		// btn1.addEventListener("click",start,false);
+		btn1.addEventListener("click",start,false);
 		btn1.onclick=start;
+		//点击则触发下列函数
 		function start(){
 			var timeRun=0;
 			var interval=setInterval(function(){
