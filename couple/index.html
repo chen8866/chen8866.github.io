@@ -17,7 +17,7 @@
 			#canvas{
 				position: absolute;
 				transform-origin: 0 0;
-				transform: translate() rotate(90deg);
+				transform: translate() rotate(45deg);
 			}
 			
 		</style>
@@ -83,7 +83,7 @@
 			var timeRun=0;
 			var interval=setInterval(function(){
 				timeRun+=10;
-				c.style.transform = "rotate("+timeRun*10+"deg)"; 
+				c.style.transform = "rotate("+timeRun*3.14+"deg)"; 
 				if(timeRun>Math.random()*5000){
 					clearInterval(interval);
 				}
