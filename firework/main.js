@@ -152,7 +152,7 @@ function Particle( x, y ) {
 	this.brightness = random( 50, 80 );
 	this.alpha = 1;
 	// set how fast the particle fades out
-	this.decay = random( 0.01, 0.02 );
+	this.decay = random( 0.008, 0.015 );
 }
 
 // update particle
@@ -188,7 +188,7 @@ Particle.prototype.draw = function() {
 // create particle group/explosion
 function createParticles( x, y ) {
 	// increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
-	var particleCount = 500;
+	var particleCount = 200;
 	while( particleCount-- ) {
 		particles.push( new Particle( x, y ) );
 	}
