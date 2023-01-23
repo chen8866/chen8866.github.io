@@ -3,7 +3,7 @@
 <br>
 
 
-+ [**情侣小游戏**](https://chen8866.github.io/couple/)
++ [**情侣转盘**](https://chen8866.github.io/couple/)
 （👈点击开始游戏）
 + [**扫雷游戏**](https://chen8866.github.io/mine-hunter/index.html)
 （👈点击开始游戏）
