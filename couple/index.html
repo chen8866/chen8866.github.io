@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<title>情侣小游戏</title>
 		<style>
+			body {
+				background-color: #3B0032;
+			}
 			#mycanvas{
 				position: absolute;
 				transition: all 3s;
@@ -29,8 +32,8 @@
 			#btn1{
 				width: 500px;
 				height: 250px;
-				background: #db346c;
-				color: white;
+				background: #000000;
+				color: #db346c;
 				border: none;
 				font-size: 100px;
 				border-radius:  120px;
@@ -55,7 +58,7 @@
 		var c=document.getElementById("mycanvas")
 		var ctx=c.getContext("2d");
 		//设置转盘颜色
-		var arr=new Array("#FFF5EE","#FFC0CB","#FFF5EE","#FFC0CB","#FFF5EE","#FFC0CB");
+		var arr=new Array("#E83DA8","#9C0027","#E83DA8","#9C0027","#E83DA8","#9C0027");
 		//设置每格内容
 		var str=new Array("舔对方胸15秒","69式30秒","做爱30秒","舔对方下面15秒","任对方控制60秒","接吻15秒");
 		ctx.translate(500,500);    //将圆心移动到canvas的中心
@@ -71,7 +74,7 @@
 			ctx.fill();
 			//设置字体
 			var txt=str[i];
-			ctx.fillStyle="rgb(34, 12,12)"; //字体颜色
+			ctx.fillStyle="#000000"; //字体颜色
 			ctx.font="40px 'Microsoft YaHei' "; //字体
 			ctx.fillText(txt,80,50); //文字坐标位置
 			ctx.save();
