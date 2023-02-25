@@ -6,19 +6,52 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>【Ray Dalio】如何成就卓越的决策？-让优秀的想法胜出</title>
 	<style>
-		.videoContent{
-		    background-color: black;
-		    /* width: 600px;
-		    height: 420px; */
+		.iframe_video {
+		    position: relative;
+		    width: 100%;
 		}
-		.videoElement{
-		    object-fit: fill;
+		
+		@media only screen and (max-width: 767px) {
+		    .iframe_video {
+		        height: 15em;
+		    }
+		}
+		
+		@media only screen and (min-width: 768px) and (max-width: 991px) {
+		    .iframe_video {
+		        height: 20em;
+		    }
+		}
+		
+		@media only screen and (min-width: 992px) and (max-width: 1199px) {
+		    .iframe_video {
+		        height: 30em;
+		    }
+		}
+		
+		@media only screen and (min-width: 1200px) {
+		    .iframe_video {
+		        height: 40em;
+		    }
+		}
+		
+		.iframe_cross {
+		    position: relative;
+		    width: 100%;
+		    height: 0;
+		    padding-bottom: 75%
+		}
+		
+		.iframe_cross iframe {
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    left: 0;
+		    top: 0
 		}
 	</style>
 </head>
 <body>
-	<div class="videoContent">
-		<iframe src="//player.bilibili.com/player.html?aid=14872761&bvid=BV1Fx411V7zm&cid=24232833&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-	</div>
+	<iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=14872761&bvid=BV1Fx411V7zm&cid=24232833&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </body>
 </html>
