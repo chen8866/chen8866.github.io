@@ -2,7 +2,10 @@
 我的Github网站<br>
 + [**个人知识库**](https://chen8866.github.io/knowledge/)
 
-这里有一些小游戏，希望你喜欢
++ 视频
+<br>
++ [【Ray Dalio】如何成就卓越的决策？-让优秀的想法胜出]((https://chen8866.github.io/video/)
++ 游戏
 <br>
 
 
